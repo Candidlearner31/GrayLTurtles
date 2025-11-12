@@ -127,7 +127,8 @@ local function checkAndDrop()
 end
 
 local function digSquare()
-	for i = 1,1 do
+local M = L/2
+	for i = 1,M do
 		for i = 1,L do
 			savedata()
 			turtle.dig()
@@ -152,34 +153,14 @@ local function digSquare()
 		turtle.dig()
 		turtle.forward()
 		turtle.turnLeft()
-		for i = 1,L do
-			savedata()
-			turtle.dig()
-			turtle.forward()
-			checkAndDrop()
-			checkFuel()
-		end
-		turtle.turnRight()
-		savedata()
-		turtle.dig()
-		turtle.forward()
-		turtle.turnRight()
-		for i = 1,L do
-			savedata()
-			turtle.dig()
-			turtle.forward()
-			checkAndDrop()
-			checkFuel()
-		end
-		turtle.turnRight()
-		for i = 1,4 do
-			turtle.forward()
-		end
-		turtle.turnRight()
-		
-		
-		
 	end 
+	turtle.turnRight()
+	turtle.turnRight()
+	turtle.turnRight()
+	for i = 1, L do
+		turtle.forward()
+	end
+	turtle.turnRight()
 end		
 
 local function BoreDown()
