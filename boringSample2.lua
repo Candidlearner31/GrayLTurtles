@@ -6,7 +6,7 @@ write("What should be the size of the square?")
 local L = read()
 print(D.."x"..O)
 local x, y = 0, 0
-local stone,granite,diorite,andesite,coal,copper,lapis,redstone,diamond,gold,emerald = 0,0,0,0,0,0,0,0,0,0,0
+local stone,granite,diorite,andesite,coal,copper,iron,lapis,redstone,diamond,gold,emerald = 0,0,0,0,0,0,0,0,0,0,0,0
 
 local function savedata()
     -- turtle.inspectDown() returns (true, data) or (false, reason)
@@ -37,6 +37,8 @@ local function savedata()
             gold = gold + 1
         elseif blockName:find("emerald") then
             emerald = emerald + 1
+		elseif blockName:find("Iron") then
+			iron = iron + 1
         elseif blockName:find("stone") then
             stone = stone + 1
         end
